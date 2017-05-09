@@ -21,7 +21,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    compile 'com.github.russelarms:offsetanimator:0.9'
+    compile 'com.github.russelarms:offsetanimator:1.0.1'
 }
 ```
 
