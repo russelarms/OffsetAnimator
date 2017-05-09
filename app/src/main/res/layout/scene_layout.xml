@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/ocean"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:translationY="120dp"/>
+
+    <ImageView
+        android:id="@+id/fish_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fish_left"
+        android:translationX="-280dp"/>
+
+    <ImageView
+        android:id="@+id/fish_left_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fish_left"/>
+
+    <ImageView
+        android:id="@+id/submarine"
+        android:layout_width="137.91dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/submarine_blue"/>
+
+    <ImageView
+        android:id="@+id/fish_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fish_right"
+        android:translationX="280dp"/>
+
+</FrameLayout>
