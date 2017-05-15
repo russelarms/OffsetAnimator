@@ -64,7 +64,7 @@ public class AnimatorScene extends RelativeLayout {
     }
 
     public void prepare() {
-        submarine.setY(screenDimensions.y + convertDIPToPixels(getContext(), 50));
+        submarine.setY(screenDimensions.y + dipToPx(50));
         submarine.setX(screenDimensions.x);
         fishLeftBottom.setY(screenDimensions.y);
     }
@@ -72,18 +72,18 @@ public class AnimatorScene extends RelativeLayout {
     private void initSteps() {
         //step 0
         scene.page(0).step(0)
-                .createAnimation(ocean.getY(), ocean.getY() - convertDIPToPixels(getContext(), 120))
+                .createAnimation(ocean.getY(), ocean.getY() - dipToPx(120))
                 .setDuration(0.8f)
                 .setListener(value -> ocean.setY(value));
 
         scene.page(0).step(1)
-                .createAnimation(fishLeft.getX(), fishLeft.getX() + convertDIPToPixels(getContext(), 160))
+                .createAnimation(fishLeft.getX(), fishLeft.getX() + dipToPx(160))
                 .setDuration(0.3f)
                 .setStartThreshold(0.5f)
                 .setListener(value -> fishLeft.setX(value));
 
         scene.page(0).step(2)
-                .createAnimation(fishRight.getX(), fishRight.getX() - convertDIPToPixels(getContext(), 160))
+                .createAnimation(fishRight.getX(), fishRight.getX() - dipToPx(160))
                 .setDuration(0.5f)
                 .setStartThreshold(0.3f)
                 .setListener(value -> fishRight.setX(value));
@@ -107,14 +107,14 @@ public class AnimatorScene extends RelativeLayout {
                         ArcUtils.centerX(submarine),
                         ArcUtils.centerY(submarine),
                         ArcUtils.centerX(submarine),
-                        convertDIPToPixels(getContext(), 48),
+                        dipToPx(48),
                         180f, ArcSide.LEFT))
                 .setDuration(0.5f);
 
         scene.page(2).step(1)
                 .createAnimation(() -> AnimatorFactory.createArcAnimator(submarine,
                         ArcUtils.centerX(submarine),
-                        convertDIPToPixels(getContext(), 48),
+                        dipToPx(48),
                         submarine.getX() + submarine.getWidth() / 2,
                         ArcUtils.centerY(submarine),
                         180f, ArcSide.RIGHT))
@@ -146,12 +146,12 @@ public class AnimatorScene extends RelativeLayout {
 
         //step 3
         scene.page(3).step(0)
-                .createAnimation(() -> AnimatorFactory.createAnimator(fishLeft.getX(), fishLeft.getX() - convertDIPToPixels(getContext(), 160)))
+                .createAnimation(() -> AnimatorFactory.createAnimator(fishLeft.getX(), fishLeft.getX() - dipToPx(160)))
                 .setDuration(0.5f)
                 .setListener(value -> fishLeft.setX(value));
 
         scene.page(3).step(1)
-                .createAnimation(() -> new AnotherOffsetAnimator(fishRight.getX(), fishRight.getX() + convertDIPToPixels(getContext(), 160)))
+                .createAnimation(() -> new AnotherOffsetAnimator(fishRight.getX(), fishRight.getX() + dipToPx(160)))
                 .setDuration(0.5f)
                 .setListener(value -> fishRight.setX(value));
 
@@ -187,5 +187,9 @@ public class AnimatorScene extends RelativeLayout {
                 .createAnimation(() -> AnimatorFactory.createAnimator(submarine.getY(), screenDimensions.y / 2 - submarine.getHeight()))
                 .setInterpolator(new DecelerateInterpolator())
                 .setListener(value -> submarine.setY(value));
+    }
+
+    private int dipToPx(int dip) {
+        return convertDIPToPixels(getContext(), dip);
     }
 }
