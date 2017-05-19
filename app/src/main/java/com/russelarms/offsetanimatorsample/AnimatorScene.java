@@ -70,7 +70,6 @@ public class AnimatorScene extends RelativeLayout {
     }
 
     private void initSteps() {
-        //step 0
         scene.page(0).step(0)
                 .createAnimation(ocean.getY(), ocean.getY() - dipToPx(120))
                 .setDuration(0.8f)
@@ -101,7 +100,7 @@ public class AnimatorScene extends RelativeLayout {
                 .createAnimation(submarine.getX(), screenDimensions.x / 2 - submarine.getWidth() / 2)
                 .setListener(value -> submarine.setX(value));
 
-        //step 2
+
         scene.page(2).step(0)
                 .createAnimation(() -> AnimatorFactory.createArcAnimator(submarine,
                         ArcUtils.centerX(submarine),
@@ -144,7 +143,7 @@ public class AnimatorScene extends RelativeLayout {
                 .setDuration(0.25f)
                 .setListener(value -> submarine.setRotation(value));
 
-        //step 3
+
         scene.page(3).step(0)
                 .createAnimation(() -> AnimatorFactory.createAnimator(fishLeft.getX(), fishLeft.getX() - dipToPx(160)))
                 .setDuration(0.5f)
