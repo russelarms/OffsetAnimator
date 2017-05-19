@@ -1,6 +1,6 @@
 # OffsetAnimator
 
-OffsetAnimator lets animate objects basing on touchevents, so users can be engaged into animation process.
+OffsetAnimator lets animate objects basing on touchevents, so users can be engaged in an animation process.
 
 ![Yellow submarine](./preview/sample_video.gif)
 
@@ -25,7 +25,10 @@ dependencies {
 }
 ```
 
-Library's min sdk version is 11.
+## Requirements
+
+Min sdk version is 11.
+The library doesn't have any transitive dependencies.
 
 ## Scene
 
@@ -102,7 +105,6 @@ scene.page(1).step(0)
 
 ## Arc animations
 
-The library utilies some code from  https://github.com/asyl/ArcAnimator for arc animations.
 Create arc animation:
 
 ```java
@@ -147,6 +149,12 @@ scene.page(3).step(1)
 ## License
 
 `OffsetAnimator` is available under the MIT license. See the LICENSE file for more info.
+The library uses some code from https://github.com/asyl/ArcAnimator for arc animations.
+
+The submarine and the fish images picked from freepik.com:
+<a href='http://www.freepik.com/free-vector/nice-diving-background-with-a-yellow-submarine_891930.htm'>Designed by Freepik</a>
+<a href="http://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
+
 
 Copyright 2017 russelarms.
 
