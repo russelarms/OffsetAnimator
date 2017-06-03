@@ -21,6 +21,12 @@ class OffsetArcAnimator extends OffsetAnimator {
         this.arcMetric = arcMetric;
     }
 
+
+    /**
+     * overrides animate method for Arc Movement.
+     *
+     * @param positionOffset a float between 0 and 1.
+     */
     @Override
     public void animate(float positionOffset) {
         float currentDegree = computeValueByOffset(positionOffset);
@@ -32,6 +38,9 @@ class OffsetArcAnimator extends OffsetAnimator {
         assignValue(currentDegree);
     }
 
+    /**
+     * Overrides the ensureListener method from OffsetAnimator and removes functionality for only this class.
+     */
     @Override
     protected void ensureListener() {
     }

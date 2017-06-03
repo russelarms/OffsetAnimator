@@ -85,7 +85,7 @@ public class OffsetAnimator {
 
     protected void ensureListener() {
         if (params.getValueListener() == null) {
-            throw new IllegalArgumentException("value listener must be set to assign values");
+            throw new IllegalArgumentException("Value Listener must be set to assign values.");
         }
     }
 
