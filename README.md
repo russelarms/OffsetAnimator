@@ -30,6 +30,11 @@ dependencies {
 Min sdk version is 11.
 The library doesn't have any transitive dependencies.
 
+## Tutorial
+
+<a href="https://medium.com/@russel.arms/android-animation-driven-by-finger-movement-offsetanimator-2833fce6847c">A Comprehensive tutorial.</a>
+
+
 ## Scene
 
 To create viewpager-based animation you should bind a scene to position updates:
