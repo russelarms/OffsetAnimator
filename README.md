@@ -1,3 +1,5 @@
+<a href="https://jitpack.io/#russelarms/offsetanimator/1.0.2/"/>
+
 # OffsetAnimator
 
 OffsetAnimator lets animate objects basing on touchevents, so users can be engaged in an animation process.
