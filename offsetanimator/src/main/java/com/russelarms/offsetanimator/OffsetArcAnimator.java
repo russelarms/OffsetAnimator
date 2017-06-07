@@ -50,7 +50,7 @@ class OffsetArcAnimator extends OffsetAnimator {
                 * ArcUtils.cos(currentDegree);
         float y = arcMetric.getAxisPoint().y - arcMetric.getRadius()
                 * ArcUtils.sin(currentDegree);
-        view.setX(x - view.getWidth() / 2);
-        view.setY(y - view.getHeight() / 2);
+        view.setX(x - view.getWidth() / 2f);
+        view.setY(y - view.getHeight() / 2f);
     }
 }
