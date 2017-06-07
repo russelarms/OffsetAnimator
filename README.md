@@ -1,4 +1,4 @@
-<a href="https://jitpack.io/#russelarms/offsetanimator/1.0.2/"/>
+[![](https://jitpack.io/v/russelarms/offsetanimator.svg)](https://jitpack.io/#russelarms/offsetanimator)
 
 # OffsetAnimator
 
